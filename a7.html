@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #333;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-container {
+            height: 1000px;
+            width: 1200px;
+            background-color: rgb(248, 248, 242);
+            padding: 20px;
+            border: 4px solid orange;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 150px 400px 400px;      
+            column-gap: 15px;
+            row-gap: 0;           
+            grid-template-areas:
+                "header header header"
+                "left mid-top right"
+                "left mid-bottom right";
+        }
+
+        .grid-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            background-color: rgb(248, 248, 242);
+        }
+
+        .box1 {
+            grid-area: header;
+            border: 4px solid purple;
+        }
+
+        .box2 {
+            grid-area: left;
+            border: 4px solid green;
+        }
+
+        .box3 {
+            grid-area: mid-top;
+            border: 4px solid blue;
+        }
+
+        .box4 {
+            grid-area: mid-bottom;
+            border: 4px solid blue;
+        }
+
+        .box5 {
+            grid-area: right;
+            border: 4px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="grid-item box1"></div>
+        <div class="grid-item box2"></div>
+        <div class="grid-item box3"></div>
+        <div class="grid-item box4"></div>
+        <div class="grid-item box5"></div>
+    </div>
+
+</body>
+</html>

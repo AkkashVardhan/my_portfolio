@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page - Kheer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #111;
+            color: whitesmoke; 
+            line-height: 1.6;
+            padding: 50px 10%;
+            animation: fadeIn 1.5s ease-in-out;
+            font-weight: 300;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: whitesmoke; 
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.6); 
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        nav img {
+            width: 400px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4); 
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        nav img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.8); 
+        }
+
+        main {
+            background: #222; 
+            border: 2px solid whitesmoke;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        main section header h2 {
+            color: whitesmoke;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 5px;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
+        }
+
+        .ul, .ol {
+            margin-left: 25px;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .ul li, .ol li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 15px;
+            transition: background-color 0.3s ease;
+            line-height: 1.4;
+        }
+
+        .ul li::before {
+            content: '•';
+            color: whitesmoke; 
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1.5em;
+            font-size: 1.2em;
+        }
+
+        .ul li:hover, .ol li:hover {
+            transform: translateX(10px);
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        footer p em {
+            color: whitesmoke; 
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
+            font-weight: 600;
+        }
+
+        main section:hover {
+            font-weight: 600;
+            border-radius: 20px;
+            background-color: #666; 
+            color: black;
+            transition: 0.3s;
+            box-shadow: 0 0 25px #666;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 30px 5%;
+            }
+
+            nav img {
+                width: 100%;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            main section header h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Recipe for Kheer 🍚</h1>
+    </header>
+
+    <nav>
+        <img src="../ClassWork/CSS/Class 1/Kheer.jpeg" alt="Image of delicious Kheer dessert">
+    </nav>
+
+    <main>
+        <section>
+            <header>
+                <h2>Ingredients</h2>
+            </header>
+            <ul class="ul">
+                <li>1 Nestlé MILKMAID Mini</li>
+                <li>1 litre Nestlé a+ Toned Milk</li>
+                <li>50 gms Rice</li>
+                <li>½ tsp Elaichi Powder (Cardamom)</li>
+                <li>3 tbsp Mixed and Chopped Dry Fruits (optional)</li>
+            </ul>
+        </section>
+
+        <section>
+            <header>
+                <h2>Instructions</h2>
+            </header>
+            <ol class="ol">
+                <li>Wash rice and pressure cook it in milk for 10 minutes (or cook on slow flame, until the rice is soft).</li>
+                <li>Add Nestlé MILKMAID and cook for another 5 to 7 minutes, stirring constantly, until the Rice Kheer reaches the desired consistency.</li>
+                <li>Remove it from the flame. Serve Rice Kheer garnished with nuts and elaichi powder.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p><em>Enjoy your homemade Kheer!</em></p>
+    </footer>
+
+</body>
+
+</html>

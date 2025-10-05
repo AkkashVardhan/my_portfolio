@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Movie Collection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #111;
+            color: whitesmoke;
+            text-align: center;
+            padding: 50px 10%;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: whitesmoke;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: whitesmoke;
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            text-align: left;
+            border: 2px solid whitesmoke;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+
+        table:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3); 
+        }
+
+        th, td {
+            border: 1px solid #2c343e;
+            padding: 15px 20px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        th {
+            background-color: #071e48;
+            color: whitesmoke;
+            font-weight: bold;
+            text-align: center;
+            border-bottom: 3px solid whitesmoke;
+        }
+
+        table tbody tr:nth-child(even) {
+            background-color: #2c343e;
+        }
+
+        table tbody tr:nth-child(odd) {
+            background-color: #1f242d;
+        }
+
+        table tbody tr:hover {
+            background-color: #3b444f;
+            box-shadow: none;
+            cursor: pointer;
+        }
+
+        table tr td:first-child {
+            font-weight: bold;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Movie Collection</h1>
+
+    <h2>Favorite Indian Classics</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Genre</th>
+                <th>Year</th>
+                <th>Directed By</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mersal</td>
+                <td>Action/Thriller</td>
+                <td>2017</td>
+                <td>Atlee</td>
+            </tr>
+            <tr>
+                <td>Nayakan</td>
+                <td>Crime/Drama</td>
+                <td>1987</td>
+                <td>Mani Ratnam</td>
+            </tr>
+            <tr>
+                <td>Annamalai</td>
+                <td>Action/Drama</td>
+                <td>1992</td>
+                <td>Suresh Krissna</td>
+            </tr>
+            <tr>
+                <td>Nanban</td>
+                <td>Comedy/Drama</td>
+                <td>2012</td>
+                <td>Shankar</td>
+            </tr>
+            <tr>
+                <td>Baahubali: The Beginning</td>
+                <td>Epic Action</td>
+                <td>2015</td>
+                <td>S. S. Rajamouli</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

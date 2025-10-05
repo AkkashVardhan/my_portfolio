@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #1f242d;
+            color: whitesmoke;
+            text-align: center;
+            padding: 50px 10%;
+            line-height: 1.6;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: whitesmoke;
+            margin-bottom: 25px;
+        }
+
+        main p {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        .dec-img {
+            width: 600px;
+            height: 300;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .dec-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: whitesmoke;
+            margin-bottom: 15px;
+        }
+
+        .link-dec {
+            display: inline-block;
+            background-color: whitesmoke;
+            color: #1f242d;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 25px;
+            border-radius: 25px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .link-dec:hover {
+            background-color: transparent;
+            color: whitesmoke;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        footer em {
+            color: whitesmoke;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to My Webpage</h1>
+    </header>
+
+    <main>
+        <p>Hello! I am learning web development. I enjoy coding and exploring new technologies.</p>
+
+        <img src="Decathlon.jpg" alt="Decathlon-img" class="dec-img">
+
+        <h2>My Favorite Website</h2>
+        <a href="https://www.decathlon.in/" target="_blank" class="link-dec">Visit Example Website</a>
+    </main>
+
+    <footer>
+        <p><em>Made with ❤️ by Akkash Vardhan</em></p>
+    </footer>
+</body>
+
+</html>

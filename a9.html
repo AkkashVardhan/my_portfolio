@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferris Wheel</title>
+    <style>
+        /* Basic styles to center the animation */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #ffffff;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Container for the ferris wheel */
+        .ferris-wheel-container {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* The main wheel that rotates */
+        .wheel {
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            border-radius: 50%;
+            position: relative;
+            animation: rotate-wheel 10s linear infinite;
+        }
+
+        /* Styling for the spokes of the wheel */
+        .spoke {
+            position: absolute;
+            width: 2px;
+            height: 150px; /* Half the wheel's diameter */
+            background-color: black;
+            top: 50%;
+            left: 50%;
+            transform-origin: top center;
+        }
+
+        /* Positioning each spoke */
+        .spoke:nth-of-type(1) { transform: translateX(-50%) rotate(0deg); }
+        .spoke:nth-of-type(2) { transform: translateX(-50%) rotate(60deg); }
+        .spoke:nth-of-type(3) { transform: translateX(-50%) rotate(120deg); }
+        .spoke:nth-of-type(4) { transform: translateX(-50%) rotate(180deg); }
+        .spoke:nth-of-type(5) { transform: translateX(-50%) rotate(240deg); }
+        .spoke:nth-of-type(6) { transform: translateX(-50%) rotate(300deg); }
+
+        /* A wrapper to place each cabin on the circumference of the wheel */
+        .cabin-placer {
+            position: absolute;
+            width: 0;
+            height: 150px; /* Half the wheel height to act as an arm */
+            top: 50%;
+            left: 50%;
+            transform-origin: top center;
+        }
+
+        /* Position each placer arm around the wheel */
+        /* We start at 7 because there are 6 spoke divs before the cabin placers */
+        .cabin-placer:nth-of-type(7) { transform: rotate(0deg); }
+        .cabin-placer:nth-of-type(8) { transform: rotate(60deg); }
+        .cabin-placer:nth-of-type(9) { transform: rotate(120deg); }
+        .cabin-placer:nth-of-type(10) { transform: rotate(180deg); }
+        .cabin-placer:nth-of-type(11) { transform: rotate(240deg); }
+        .cabin-placer:nth-of-type(12) { transform: rotate(300deg); }
+
+        /* Styling for the cabins */
+        .cabin {
+            width: 75px;
+            height: 75px;
+            background-color: yellow;
+            position: absolute;
+            bottom: 0; /* Positioned at the end of the placer arm */
+            left: -30px; /* Center the cabin on the arm */
+            animation: counter-rotate 10s linear infinite, change-color 8s linear infinite;
+        }
+
+        /* Keyframe animation for the wheel's rotation */
+        @keyframes rotate-wheel {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Keyframe animation to keep the cabins from rotating with the wheel */
+        @keyframes counter-rotate {
+            from {
+                /* Start rotated as a diamond */
+                transform: rotate(45deg) rotate(0deg);
+            }
+            to {
+                /* Maintain diamond shape while counter-rotating */
+                transform: rotate(45deg) rotate(-360deg);
+            }
+        }
+
+        /* Keyframe animation for changing cabin colors */
+        @keyframes change-color {
+            0%, 100% { background-color: yellow; } /* Yellow */
+            20% { background-color: red; } /* Red */
+            40% { background-color: orange; } /* Orange */
+            60% { background-color: purple; } /* Purple */
+            80% { background-color: brown; } /* Brown */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="ferris-wheel-container">
+        <div class="wheel">
+            <!-- Spokes -->
+            <div class="spoke"></div>
+            <div class="spoke"></div>
+            <div class="spoke"></div>
+            <div class="spoke"></div>
+            <div class="spoke"></div>
+            <div class="spoke"></div>
+
+            <!-- Cabin Placer elements position the cabins on the wheel -->
+            <div class="cabin-placer">
+                <div class="cabin"></div>
+            </div>
+             <div class="cabin-placer">
+                <div class="cabin"></div>
+            </div>
+             <div class="cabin-placer">
+                <div class="cabin"></div>
+            </div>
+             <div class="cabin-placer">
+                <div class="cabin"></div>
+            </div>
+             <div class="cabin-placer">
+                <div class="cabin"></div>
+            </div>
+             <div class="cabin-placer">
+                <div class="cabin"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Weekend Plans</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif; 
+        }
+
+        body {
+            background-color: #1f242d;
+            color: whitesmoke;
+            text-align: left;
+            padding: 50px 10%;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: whitesmoke;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: whitesmoke;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .plan {
+            padding: 10px;
+            font-size: 1.6rem;
+            font-weight: bold;
+            border-radius: 20px;
+            list-style-type: disc;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: whitesmoke;
+            cursor: pointer; 
+            transition: transform 0.3s ease, all 0.3s ease;
+        }
+        
+        .plan:hover {
+            background-color: black;
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
+        }
+
+
+        .plans {
+            list-style-position: outside;
+            padding-left: 20px;
+        }
+
+
+        .item-list {
+            padding-left: 20px;
+            list-style-position: inside;
+            font-size: 1.1rem;
+            font-weight: normal;
+        }
+
+        .item-list li {
+             margin-bottom: 8px;
+             padding: 5px;
+             border-radius: 5px;
+             transition: background-color 0.3s ease, transform 0.3s ease; 
+        }
+
+
+        .item-list li:hover {
+            background-color: #2c343e; 
+            transform: scale(1.02); 
+        }
+
+
+
+        .priority-list {
+            list-style-position: inside;
+            padding-left: 0;
+            margin-bottom: 40px;
+            font-size: 1.2rem;
+        }
+        
+
+        .priority-list li {
+            margin-bottom: 8px;
+            padding: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .priority-list li:hover {
+            background-color: #2c343e;
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Weekend Plans</h1>
+
+    <ul class="plans">
+        <li class="plan">Outdoor Activities
+            <ol class="item-list">
+                <li>Morning Yoga in a park or on a rooftop.</li>
+                <li>Visit a local Historical Monument.</li>
+                <li>Playing Outdoor sport with friends.</li>
+            </ol>
+        </li>
+        <li class="plan">Movies to Watch
+            <ol class="item-list">
+                <li>Sholay (1975) - The definitive Bollywood classic.</li>
+                <li>Pather Panchali (1955) - Satyajit Ray's iconic, moving debut.</li>
+                <li>Lagaan (2001) - A great mix of sports, history, and music.</li>
+            </ol>
+        </li>
+        <li class="plan">Foods to Try
+            <ol class="item-list">
+                <li>A plate of hot Samosas or Pakoras with Chai.</li>
+                <li>A hearty meal of Dal Makhani, Butter Naan, and Paneer dish.</li>
+                <li>A refreshing dessert like Gulab Jamun or Kulfi.</li>
+            </ol>
+        </li>
+    </ul>
+
+    <h2>Top Priorities</h2>
+
+    <ol class="priority-list">
+        <li>Savour the local street food (hygiene permitting!).</li>
+        <li>Call or visit a close family member or friend.</li>
+        <li>Find some time for a nap after a heavy lunch.</li>
+    </ol>
+</body>
+
+</html>
